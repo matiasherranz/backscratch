@@ -18,13 +18,6 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('url', 'name')
 
 
-# class BackScratcherSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = BackScratcher
-#         fields = ('id', 'name', 'description', 'size', 'price')
-
-
-
 class BackScratcherSerializer(serializers.Serializer):
     pk = serializers.IntegerField(read_only=True)
     name = serializers.CharField(
